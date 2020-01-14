@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>How to Get Data</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+    $(document).ready(function(){
+      $("#btn1").click(function(){
+        alert("Text: " + $("#text1").text());
+      });
+      $("#btn2").click(function(){
+        alert("Markup: " + $("#text1").html());
+      });
+      $("#btn3").click(function(){
+        //alert("Stuff: " + $("#inText").val());
+        var inText1 = $("#inText").val();
+        var inText2 = $("#inText2").val();
+        if (inText1 === "Use" && inText2 === "Soap"){
+          alert("Please do this!");
+        }
+        else{
+          alert("I wish you'd use soap!");
+        }
+      });
+    });
+    </script>
+  </head>
+  <body>
+    <p id = "text1"> This is some <i>italicized</i> text </p>
+    <button type="button" id = "btn1">Show Text</button>
+    <button type="button" id = "btn2">Show Markup</button><br />
+    Type Use: <input type="text" id = "inText" />
+    Type Soap: <input type="text" id = "inText2" />
+    <button type="button" id = "btn3"> Submit </button>
+  </body>
+</html>
